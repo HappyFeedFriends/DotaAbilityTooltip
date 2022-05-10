@@ -6,14 +6,14 @@ const isDevelopment = process.env.NODE_ENV == 'development'
 /** @type {import('webpack').Configuration} */
 module.exports = {
     entry: {
-        example: "./src/panorama/example/index.ts",
+        example: "./index.ts",
     },
 
     mode: isDevelopment ? 'production' : "development",
-    context: path.resolve(__dirname, "../../"),
+    context: path.resolve(__dirname, "."),
     output: {
         filename: "[name].bundle.js",
-        path: path.resolve(__dirname, "../../content/panorama/scripts/custom_game"),
+        path: path.resolve(__dirname, "../content/panorama/scripts/custom_game"),
         publicPath: "file://{resources}/scripts/custom_game/",
         chunkFormat: false,
         clean: true,

@@ -1,4 +1,4 @@
-import { registerAbilitiesTooltip } from "../../../packages/DotaAbilityTooltip";
+import { registerAbilitiesTooltip } from '../packages/DotaAbilityTooltip';
 
 registerAbilitiesTooltip({
     xmlTooltip: "file://{resources}/layout/custom_game/tooltips/towers_tooltip.xml",

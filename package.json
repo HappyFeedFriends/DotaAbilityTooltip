@@ -18,9 +18,16 @@
     "files": [
         "/build"
     ],
+    "keywords": [
+        "dota",
+        "tooltip",
+        "custom tooltip",
+        "asset"
+    ],
     "scripts": {
-        "build": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config src/panorama/webpack.config.js",
-        "dev": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config src/panorama/webpack.config.js --watch",
+        "postinstall": "node scripts/install.js",
+        "build": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config example/webpack.config.js",
+        "dev": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config example//webpack.config.js --watch",
         "prepack": "tsc -p ./packages/DotaAbilityTooltip"
     },
     "devDependencies": {
@@ -36,8 +43,5 @@
         "webpack": "^5.0.0-rc.6",
         "webpack-cli": "^4.9.2",
         "webpack-panorama": "^0.2.0"
-    },
-    "dependencies": {
-        "dota-ability-tooltip": "^0.0.5"
     }
 }
