@@ -4,6 +4,8 @@ node_modules
 /game/scripts/vscripts/**/*.lua
 /build
 
+*.tgz
+
 # Dota 2 stuff
 *.bin
 *.vcss_c

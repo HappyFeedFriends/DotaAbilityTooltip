@@ -1,4 +1,5 @@
 import { registerAbilitiesTooltip } from "../../../packages/DotaAbilityTooltip";
+import { } from 'dota-ability-tooltip/build'
 
 registerAbilitiesTooltip({
     xmlTooltip: "file://{resources}/layout/custom_game/tooltips/towers_tooltip.xml",
@@ -18,3 +19,5 @@ registerAbilitiesTooltip({
         (panel.FindChildTraverse("AbilityImage") as AbilityImage).abilityname = Abilities.GetAbilityName(abilityIndex);
     },
 });
+
+
