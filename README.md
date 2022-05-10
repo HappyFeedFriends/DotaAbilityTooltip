@@ -36,7 +36,7 @@ A small script that allows you to replace the standard dota 2 ability tooltips w
 ### Varian 2
 1. Open Terminal in Vs Code (default Ctrl+Shift+`)
 2. Install package (enter command in terminal) `npm i dota-ability-tooltip`
-3. Importing method `registerAbilitiesTooltip` from package. [template](https://github.com/HappyFeedFriends/DotaAbilityTooltip/blob/master/src/panorama/example/index.ts) 
+3. Importing method `registerAbilitiesTooltip` from package. [template](https://github.com/HappyFeedFriends/DotaAbilityTooltip/blob/master/example/index.ts) 
 
 ## For Development
 1. Run command `npm run dev`
