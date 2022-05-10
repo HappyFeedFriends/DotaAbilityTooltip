@@ -45,11 +45,16 @@ interface TooltipConfig {
 }
 
 export const registerAbilitiesTooltip = (config: TooltipConfig) => {
-    const handler = (shownPanel: Panel) =>
+
+    let scheduler: ScheduleID | undefined
+
+    const handler = (shownPanel: Panel) => {
+        scheduler = undefined;
         AbilitiesTooltipInject({
             ...config,
             shownPanel,
         });
+    }
 
     $.RegisterForUnhandledEvent("DOTAShowAbilityTooltip", handler);
     $.RegisterForUnhandledEvent("DOTAShowAbilityTooltipForEntityIndex", handler);
@@ -58,22 +63,21 @@ export const registerAbilitiesTooltip = (config: TooltipConfig) => {
     $.RegisterForUnhandledEvent("DOTAShowAbilityTooltipForHero", handler);
 
     $.RegisterForUnhandledEvent("DOTAHideAbilityTooltip", () => {
-        var tooltipManager = FindDotaHudElement("Tooltips");
-        if (!tooltipManager) return;
-        var abilityTooltip = tooltipManager.FindChildTraverse("DOTAAbilityTooltip");
-        if (!abilityTooltip) return;
-        var TooltipContents = abilityTooltip.FindChildTraverse("Contents");
-        if (!TooltipContents) return;
-        const details = TooltipContents.FindChildTraverse("AbilityDetails");
-        let customTooltip = TooltipContents.FindChildTraverse("CustomTooltip");
-
-        if (customTooltip) {
-            customTooltip.visible = false;
-        }
-        TooltipContents.SetHasClass("AbilityContents", true);
-        TooltipContents.SetHasClass("AbilityContentsInject", false);
-        if (details) {
-            details.visible = true;
-        }
+        scheduler = $.Schedule(0.2,() => {
+            if (!scheduler) return;
+            var TooltipContents = FindDotaHudElement("Tooltips")?.FindChildTraverse("DOTAAbilityTooltip")?.FindChildTraverse("Contents");
+            if (!TooltipContents) return;
+            const details = TooltipContents.FindChildTraverse("AbilityDetails");
+            let customTooltip = TooltipContents.FindChildTraverse("CustomTooltip");
+    
+            if (customTooltip) {
+                customTooltip.visible = false;
+            }
+            TooltipContents.SetHasClass("AbilityContents", true);
+            TooltipContents.SetHasClass("AbilityContentsInject", false);
+            if (details) {
+                details.visible = true;
+            }
+        })
     });
 };
