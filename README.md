@@ -63,8 +63,3 @@ interface TooltipConfig {
 - [packages/DotaAbilityTooltip] - source code
 - [game | content] - for only development
 - [example] - example
-
-
-
-
-
