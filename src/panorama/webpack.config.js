@@ -1,13 +1,15 @@
 const path = require("path");
 const { PanoramaTargetPlugin } = require("webpack-panorama");
 
+const isDevelopment = process.env.NODE_ENV == 'development'
+
 /** @type {import('webpack').Configuration} */
 module.exports = {
     entry: {
         example: "./src/panorama/example/index.ts",
     },
 
-    mode: "production",
+    mode: isDevelopment ? 'production' : "development",
     context: path.resolve(__dirname, "../../"),
     output: {
         filename: "[name].bundle.js",

@@ -1,11 +1,3 @@
 {
-    "compilerOptions": {
-        "rootDir": ".",
-        "target": "es2017",
-        "lib": ["es2017"],
-        "types": ["@moddota/panorama-types"],
-        "moduleResolution": "node",
-        "strict": true,
-    },
-    "include": ["**/*.ts"]
+    "extends": "../../tsconfig.json",
 }

@@ -2,6 +2,7 @@ node_modules
 
 /content/panorama/scripts/custom_game/**/*.js
 /game/scripts/vscripts/**/*.lua
+/build
 
 # Dota 2 stuff
 *.bin
