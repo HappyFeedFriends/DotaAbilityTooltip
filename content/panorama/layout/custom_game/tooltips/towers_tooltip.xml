@@ -1,0 +1,20 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/towers_tooltip.css" />
+	</styles>
+	<Panel class="TowersTooltip" hittest="false" >
+        <Panel class="ItemTooltipCustom column">
+            <Panel id="TooltipHeader" class="TooltipHeader row">
+                <DOTAAbilityImage id="AbilityImage" />
+                <Label text="{s:name}" />
+            </Panel>
+            <Panel class="Description">
+                <Label html="true" text="{s:abilityDescription}" />
+            </Panel>
+            <Panel id="Lore" class="column">
+                <Label text="{s:lore}" />
+            </Panel>
+        </Panel>
+	</Panel>
+</root>

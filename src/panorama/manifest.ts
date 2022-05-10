@@ -1,1 +1,0 @@
-$.Msg("ui manifest loaded");

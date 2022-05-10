@@ -1,15 +1,10 @@
 {
-    "name": "",
+    "name": "dotaabilitytooltip",
     "private": true,
+    "version": "0.0.1",
     "scripts": {
-        "postinstall": "node scripts/install.js",
-        "launch": "node scripts/launch.js",
-        "build": "run-p build:*",
-        "build:panorama": "tsc --project src/panorama/tsconfig.json",
-        "build:vscripts": "tstl --project src/vscripts/tsconfig.json",
-        "dev": "run-p dev:*",
-        "dev:panorama": "tsc --project src/panorama/tsconfig.json --watch",
-        "dev:vscripts": "tstl --project src/vscripts/tsconfig.json --watch"
+        "build": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config src/panorama/webpack.config.js",
+        "dev": "node --preserve-symlinks node_modules/webpack/bin/webpack.js --config src/panorama/webpack.config.js --watch"
     },
     "devDependencies": {
         "@moddota/dota-lua-types": "^4.18.0",
@@ -17,7 +12,12 @@
         "@moddota/panorama-types": "^1.19.0",
         "fs-extra": "^9.0.0",
         "npm-run-all": "^4.1.5",
-        "typescript": "^4.2.3",
-        "typescript-to-lua": "^1.0.0"
+        "prettier": "^2.6.2",
+        "ts-loader": "^9.3.0",
+        "typescript": "^4.6.4",
+        "typescript-to-lua": "^1.0.0",
+        "webpack": "^5.0.0-rc.6",
+        "webpack-cli": "^4.9.2",
+        "webpack-panorama": "^0.2.0"
     }
 }
