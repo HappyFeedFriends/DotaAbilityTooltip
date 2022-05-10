@@ -1,8 +1,20 @@
 {
     "name": "dota-ability-tooltip",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "main": "/build/index.js",
-    "types": "/build/index.d.ts",
+    "types": "./index.d.ts",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "homepage": "https://github.com/HappyFeedFriends/DotaAbilityTooltip",
+    "description": "Utilities for created custom tooltip on dota abilities",
+    "author": {
+        "name" : "HappyFeedFriends",
+        "url" : "https://github.com/HappyFeedFriends/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/HappyFeedFriends/DotaAbilityTooltip.git"
+    },
     "files": [
         "/build"
     ],
