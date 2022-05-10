@@ -1,4 +1,8 @@
 # Dota Ability Tooltip
+[![npm version](https://img.shields.io/npm/v/dota-ability-tooltip.svg)](https://www.npmjs.com/package/dota-ability-tooltip)
+![size](https://img.shields.io/bundlephobia/min/dota-ability-tooltip)
+
+
 ## Description
 A small script that allows you to replace the standard dota 2 ability tooltips with custom ones.
 
