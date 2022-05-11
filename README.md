@@ -21,7 +21,7 @@ A small script that allows you to replace the standard dota 2 ability tooltips w
 4. Copy this file `build/index.js` in our `panorama/scripts...`
 5. Include `index.js` in XML
 ```xml
- <scripts>
+    <scripts>
         <!-- Included JS script files go here -->
         <include src="file://{resources}/scripts/custom_game/index.js" />
     </scripts>
