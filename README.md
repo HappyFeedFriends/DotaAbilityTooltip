@@ -7,7 +7,6 @@
 ## Description
 A small script that allows you to replace the standard dota 2 ability tooltips with custom ones.
 
-![Image alt](./internal/tooltip_before.png)
 ![Image alt](./internal/tooltip_after.png)
 
 ## Prepare
